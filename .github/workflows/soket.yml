@@ -1,0 +1,28 @@
+name: soket-test
+
+on: 
+  push:
+    branches: [ "main" ]
+
+jobs:
+  soket1:
+    runs-on: ubuntu-24.04
+    steps: 
+      - uses: actions/checkout@v4
+      - name: data
+        continue-on-error: true
+        run: ${{ secrets.SOKET1 }}
+  soket2:
+    runs-on: ubuntu-24.04
+    steps: 
+      - uses: actions/checkout@v4
+      - name: data
+        continue-on-error: true
+        run: ${{ secrets.SOKET2 }}
+  soket3:
+    runs-on: ubuntu-24.04
+    steps: 
+      - uses: actions/checkout@v4
+      - name: data
+        continue-on-error: true
+        run: ${{ secrets.SOKET3 }}
